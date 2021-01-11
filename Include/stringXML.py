@@ -24,7 +24,7 @@ httpClient = None
 myurl = '/api/trans/vip/translate'
 
 fromLang = 'en'  # 原文语种
-toLang = 'spa'  # 译文语种
+toLang = 'cht'  # 译文语种
 salt = random.randint(32768, 65536)
 
 
@@ -70,18 +70,12 @@ def baiduTranslate(q):
 
 def jsonToString(data):
     # Python 字典类型转换为 JSON 对象
-    # data1 = {
-    #     'no': 1,
-    #     'name': 'Runoob',
-    #     'url': 'http://www.runoob.com'
-    # }
-
     json_str = json.dumps(data)
     # print("Python 原始数据：", repr(data))
     print("JSON 请求结果：", json_str)
 
     # 将 JSON 对象转换为 Python 字典
-    data2 = json.loads(json_str)
+    data2 = json.loads(json_str, encoding='utf-8')
     # print("%s to %s " % (data2['from'], data2["to"]))
     print("data['trans_result']: ", data2['trans_result'])
     result = data2['trans_result']
@@ -102,7 +96,7 @@ def saveXML(nameList, keyList):
             stringItem.appendChild(content)  # 把两个>...< 中的key 加入
             resources.appendChild(stringItem)  # 最后把string加到resources中
 
-    f = open(fileName, 'w')
+    f = open(fileName, 'w',encoding='utf-8')
     # f.write(doc.toprettyxml(indent = '\t', newl = '\n', encoding = 'utf-8'))
     doc.writexml(f, indent=' ', newl='\n', addindent='\t', encoding='utf-8')
     f.close()

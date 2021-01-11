@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
  <resources>
- 	<string name="play">Jugar</string>
- 	<string name="open">Apertura normal</string>
- 	<string name="stop">Det��ngase.</string>
+ 	<string name="play">玩</string>
+ 	<string name="open">正常開放</string>
+ 	<string name="stop">住手</string>
  </resources>
