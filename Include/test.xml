@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <resources>
+ 	<string name="net_bad">
+ 		La red no es buena, por favor int¨¦ntalo de nuevo.
+ 		No hay red disponible
+ 		Instalaci¨®n silenciosa fallida, por favor instale manualmente
+ 	</string>
+ 	<string name="no_available_wifi">
+ 		La red no es buena, por favor int¨¦ntalo de nuevo.
+ 		No hay red disponible
+ 		Instalaci¨®n silenciosa fallida, por favor instale manualmente
+ 	</string>
+ 	<string name="silent_install_failed">
+ 		La red no es buena, por favor int¨¦ntalo de nuevo.
+ 		No hay red disponible
+ 		Instalaci¨®n silenciosa fallida, por favor instale manualmente
+ 	</string>
+ </resources>

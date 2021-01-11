@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <string name="wifi_connected">Wifi is connected!</string>-->
+<!--    <string name="play">Play</string>-->
+<!--    <string name="open">Open</string>-->
+    <string name="net_bad">The network is not good, please try again</string>
+    <string name="no_available_wifi">No available network</string>
+    <string name="silent_install_failed">Silent installation failed, please install it manually</string>
+<!--    <string name="network_disconnect">Network disconnected</string>-->
+<!--    <string name="network_connect">Network connected</string>-->
+<!--    <string name="trial">Trial</string>-->
+<!--    <string name="stop">Stop</string>-->
+</resources>

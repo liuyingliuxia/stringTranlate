@@ -2,6 +2,8 @@
 
 # -*- coding: UTF-8 -*-
 import time
+from typing import List
+from xml.dom.minidom import Document
 from xml.dom.minidom import parse
 import http.client
 import hashlib
@@ -11,7 +13,7 @@ import json
 import xml.dom.minidom
 
 # 使用minidom解析器打开 XML 文档
-fileName = xml.dom.minidom.parse("strings.xml")
+fileName = xml.dom.minidom.parse("test0.xml")
 DOMTree = xml.dom.minidom.parse("movies.xml")
 
 # collection = DOMTree.documentElement
@@ -24,7 +26,7 @@ httpClient = None
 myurl = '/api/trans/vip/translate'
 
 fromLang = 'en'  # 原文语种
-toLang = 'jp'  # 译文语种
+toLang = 'spa'  # 译文语种
 salt = random.randint(32768, 65536)
 
 
@@ -65,6 +67,8 @@ def printxml():
 
 def printString():
     strings = collection.getElementsByTagName("string")
+    nameList = []
+    keyList = []
     for myString in strings:
         print("name: %s" % myString.getAttribute("name"))
         # key = collection.getElementsByTagName("string")[0]
@@ -72,6 +76,9 @@ def printString():
         print("key== %s" % keys)
         print("translate== %s" % baiduTranslate(keys))
         print("=========================================")
+        nameList.append(myString.getAttribute('name'))
+        keyList.append(baiduTranslate(keys))
+    saveXML(nameList, keyList)
 
 
 def baiduTranslate(q):
@@ -119,8 +126,29 @@ def jsonToString(data):
     return result[0]['dst']
 
 
+def saveXML(nameList, keyList):
+    fileName = 'test.xml'
+    doc = Document()  # 创建DOM文档对象
+    resources = doc.createElement('resources')  # 创建根元素
+    doc.appendChild(resources)
+    for name in nameList:
+        stringItem = doc.createElement('string')  # 创建string
+        stringItem.setAttribute('name', name)  # 把name加入
+    for key in keyList:
+        content = doc.createTextNode(key)  # 创建key
+        stringItem.appendChild(content)  # 把两个>...< 中的key 加入
+    resources.appendChild(stringItem)  # 最后把string加到resources中
+
+    f = open(fileName, 'w')
+    # f.write(doc.toprettyxml(indent = '\t', newl = '\n', encoding = 'utf-8'))
+    doc.writexml(f, indent=' ', newl='\n', addindent='\t', encoding='utf-8')
+    f.close()
+    print('保存文件%s成功' % fileName)
+
+
 if __name__ == '__main__':
     # printxml();
     printString()
-    datas = baiduTranslate('hello world')
-    jsonToString(datas)
+    # datas = baiduTranslate('hello world')
+    # jsonToString(datas)
+    # saveXML('close', 'CLOSE')

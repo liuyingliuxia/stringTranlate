@@ -2,21 +2,6 @@
 <resources>
     <string name="app_name">WHALE_TV_OPEN_LAUNCHER</string>
     <string name="recently">Recently Viewed</string>
-
-    <!--login key start-->
-    <string name="facebook_app_id">159888557966956</string>
-    <string name="fb_login_protocol_scheme">fb159888557966956</string>
-
-    <string name="fb_scope">public_profile,user_likes</string>
-    <string name="fb_access_token">159888557966956|391d4707c40dc1f7fa84ffb37eb23165</string>
-
-    <string name="twitter_api_key">PxbMDQn3H08EiGfj2gtfsfTuG</string>
-    <string name="twitter_secrate_key">GRoIYrPD9wQyCGCAeoxbzkc7HDwQg6QboLEHATX2dfyEFdbMIt</string>
-    <!--login key end-->
-    <!--Bugly app id start-->
-    <string name="bugly_app_id">21029ed87c</string>
-    <!--Bugly app id end-->
-
     <string name="personal_login_tittle">Log-in by e-mail</string>
     <string name="personal_account_title">Email address</string>
     <string name="personal_account_hint">Please input the correct email address.</string>
