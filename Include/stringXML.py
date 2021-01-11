@@ -2,6 +2,8 @@
 
 # -*- coding: UTF-8 -*-
 import time
+from time import sleep
+from tqdm import tqdm
 from typing import List
 from xml.dom.minidom import Document
 from xml.dom.minidom import parse
@@ -13,9 +15,11 @@ import json
 import xml.dom.minidom
 
 # 使用minidom解析器打开 XML 文档
-fileName = xml.dom.minidom.parse("test0.xml")
+fromFileName = xml.dom.minidom.parse("strings.xml")
+# 最后保存的文档
+toFileName = 'strings_cht.xml'
 
-collection = fileName.documentElement
+collection = fromFileName.documentElement
 
 appid = '20210110000668359'  # 填写你的appid
 secretKey = 'rX_4tltNBEZMl5PsxW79'  # 填写你的密钥
@@ -28,17 +32,17 @@ toLang = 'cht'  # 译文语种
 salt = random.randint(32768, 65536)
 
 
-def printString():
+def autoTranslate():
     strings = collection.getElementsByTagName("string")
     nameList = []
     keyList = []
-    for myString in strings:
-        print("name: %s" % myString.getAttribute("name"))
-        # key = collection.getElementsByTagName("string")[0]
+    print('文件翻译进度：')
+    for myString in tqdm(strings):
+        # print("name: %s" % myString.getAttribute("name"))
         keys = myString.childNodes[0].data
-        print("key== %s" % keys)
-        print("translate== %s" % baiduTranslate(keys))
-        print("=========================================")
+        # print("key== %s" % keys)
+        # print("translate== %s" % baiduTranslate(keys))
+        # print("=========================================")
         nameList.append(myString.getAttribute('name'))
         keyList.append(baiduTranslate(keys))
     saveXML(nameList, keyList)
@@ -71,20 +75,18 @@ def baiduTranslate(q):
 def jsonToString(data):
     # Python 字典类型转换为 JSON 对象
     json_str = json.dumps(data)
-    # print("Python 原始数据：", repr(data))
-    print("JSON 请求结果：", json_str)
+    # print("JSON 请求结果：", json_str)
 
     # 将 JSON 对象转换为 Python 字典
     data2 = json.loads(json_str, encoding='utf-8')
     # print("%s to %s " % (data2['from'], data2["to"]))
-    print("data['trans_result']: ", data2['trans_result'])
+    # print("data['trans_result']: ", data2['trans_result'])
     result = data2['trans_result']
-    # print("======",result[0]['dst'])
     return result[0]['dst']
 
 
 def saveXML(nameList, keyList):
-    fileName = 'test.xml'
+
     doc = Document()  # 创建DOM文档对象
     resources = doc.createElement('resources')  # 创建根元素
     doc.appendChild(resources)
@@ -96,16 +98,15 @@ def saveXML(nameList, keyList):
             stringItem.appendChild(content)  # 把两个>...< 中的key 加入
             resources.appendChild(stringItem)  # 最后把string加到resources中
 
-    f = open(fileName, 'w',encoding='utf-8')
-    # f.write(doc.toprettyxml(indent = '\t', newl = '\n', encoding = 'utf-8'))
+    f = open(toFileName, 'w',encoding='utf-8')
+    # f.write(doc.toprettyxml(indent = ' ', newl = '\n', encoding = 'utf-8'))
     doc.writexml(f, indent=' ', newl='\n', addindent='\t', encoding='utf-8')
     f.close()
-    print('保存文件%s成功' % fileName)
+    print('保存文件%s成功！' % toFileName)
 
 
 if __name__ == '__main__':
-    # printxml();
-    printString()
-    # datas = baiduTranslate('hello world')
-    # jsonToString(datas)
-    # saveXML('close', 'CLOSE')
+    # for i in tqdm(range(20)):
+    #     sleep(0.5)
+    autoTranslate()
+
