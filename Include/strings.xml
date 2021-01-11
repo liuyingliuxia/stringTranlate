@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WHALE_TV_OPEN_LAUNCHER</string>
+    <string name="recently">Recently Viewed</string>
+
+    <!--login key start-->
+    <string name="facebook_app_id">159888557966956</string>
+    <string name="fb_login_protocol_scheme">fb159888557966956</string>
+
+    <string name="fb_scope">public_profile,user_likes</string>
+    <string name="fb_access_token">159888557966956|391d4707c40dc1f7fa84ffb37eb23165</string>
+
+    <string name="twitter_api_key">PxbMDQn3H08EiGfj2gtfsfTuG</string>
+    <string name="twitter_secrate_key">GRoIYrPD9wQyCGCAeoxbzkc7HDwQg6QboLEHATX2dfyEFdbMIt</string>
+    <!--login key end-->
+    <!--Bugly app id start-->
+    <string name="bugly_app_id">21029ed87c</string>
+    <!--Bugly app id end-->
+
+    <string name="personal_login_tittle">Log-in by e-mail</string>
+    <string name="personal_account_title">Email address</string>
+    <string name="personal_account_hint">Please input the correct email address.</string>
+    <string name="personal_password_hint">Password</string>
+    <string name="personal_code_hint">Verification code</string>
+    <string name="personal_forget">Forget the possword</string>
+    <string name="personal_login">Log in</string>
+    <string name="personal_confirm">Confirm</string>
+    <string name="personal_register">Register</string>
+    <string name="personal_qrcode_login">Log-in by QR code</string>
+    <string name="personal_qrcode_alert">Please use the below software to scan the code. </string>
+    <string name="personal_register_title">Register</string>
+    <string name="personal_reset_title">RETRIEVE THE PASSWORD</string>
+    <string name="personal_send">Send</string>
+    <string name="personal_re_send">Resend</string>
+    <string name="personal_switch_title">select the account to login</string>
+    <string name="personal_switch_accounts">switch accounts</string>
+    <string name="personal_alert_1">Press the</string>
+    <string name="personal_alart_2">button to delete the account</string>
+    <string name="personal_logout">Log out</string>
+    <string name="not_applicable">N/A</string>
+    <string name="Search">search</string>
+    <string name="verification_hind">Please input the correct email address.</string>
+    <string name="verification_email_empty">Please input the email address.</string>
+    <string name="verification_success">Get verification code</string>
+    <string name="get_verification">Get verification code</string>
+    <string name="verification_error">Error, please try again.</string>
+
+    <!--search-->
+    <string name="search_history">History</string>
+    <string name="search_recommend">Recommend</string>
+    <string name="search_type_apps">App</string>
+    <string name="search_type_track">Track</string>
+    <string name="search_type_videos">Videos</string>
+    <string name="search_type_movie">Movie</string>
+    <string name="search_type_season">Season</string>
+    <string name="search_type_music">Music</string>
+    <string name="search_type_tvshow">TV series</string>
+    <string name="search_no_result_content">No result!</string>
+
+    <!--apps start-->
+    <string name="install_public_store">Please install APP Store</string>
+    <string name="apps_open">Open</string>
+    <string name="apps_pause">Pause</string>
+    <string name="apps_continue">Continue</string>
+    <string name="apps_waiting">Waiting</string>
+    <string name="apps_updata">Update</string>
+    <string name="apps_uninstall">Uninstall</string>
+    <string name="apps_download">Download</string>
+    <string name="apps_version">Version</string>
+    <string name="error">Error</string>
+    <string name="apps_install">Install</string>
+    <string name="apps_installing">Installing</string>
+    <string name="remove_tip">Are you sure you want to remove this?</string>
+    <string name="sure">Sure</string>
+    <string name="cancel">Cancel</string>
+    <string name="apps_cancel">Cancel</string>
+    <string name="apps">Apps</string>
+    <string name="recommend">Recommend</string>
+    <string name="my_apps">My apps</string>
+    <string name="video">Video</string>
+    <string name="game">Game</string>
+    <string name="music">Music</string>
+    <string name="sports">Sports</string>
+    <string name="all">All</string>
+    <string name="news">News</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="screen_off">Close window</string>
+    <string name="clear_memory">Clear memory</string>
+    <string name="pvr">PVR</string>
+    <string name="ip_epg">IP-EPG</string>
+    <string name="sources">Signal source</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="ip_address">Ip address</string>
+    <string name="signal_level">Signal level</string>
+    <string name="safety_strategy">Safety</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="forget">Forget</string>
+    <string name="connect">Connect</string>
+    <string name="connected">Connected</string>
+
+    <string name="password_limit">The password must be not less than 8 bit</string>
+    <string name="password_error">The connection failed. Please re-enter your password</string>
+    <string name="wifi_level_excellent">Excellent</string>
+    <string name="wifi_level_good">Good</string>
+    <string name="wifi_level_fair">Fair</string>
+    <string name="wifi_level_poor">Poor</string>
+    <string name="wifi_level_none">None</string>
+    <string name="subnet_mask">Subnet mask</string>
+    <string name="default_gateway">Default gateway</string>
+    <string name="dns_address">DNS address</string>
+    <string name="mac_address">MAC address</string>
+    <string name="close">Close</string>
+    <string name="no_network">No network</string>
+    <string name="check_network">Please check the network or try again later</string>
+    <string name="network_setting">Network settings</string>
+    <string name="wifi_connected">Wifi is connected!</string>
+    <string name="play">Play</string>
+    <string name="open">Open</string>
+    <string name="net_bad">The network is not good, please try again</string>
+    <string name="no_available_wifi">No available network</string>
+    <string name="silent_install_failed">Silent installation failed, please install it manually</string>
+    <string name="network_disconnect">Network disconnected</string>
+    <string name="network_connect">Network connected</string>
+    <string name="trial">Trial</string>
+    <string name="stop">Stop</string>
+    <string name="time">Time</string>
+    <string name="type">Type</string>
+    <string name="album">Album</string>
+    <string name="mins">mins</string>
+    <string name="secs">secs</string>
+
+    <!--weather-->
+    <string name="search_city_result">Result</string>
+    <string name="weather_no_data_tips">Unable to get weather information for your city.</string>
+    <string name="weather_set_up_city">SET UP THE CITY</string>
+    <string name="weather_today">Today</string>
+
+    <!--Toast-->
+    <string name="toast_account_empty">Account cannot be empty</string>
+    <string name="toast_correct_email_address">Please input the correct email address. </string>
+    <string name="toast_correct_email_code">Please input verification code sending by email.</string>
+    <string name="toast_password_empty">The password can not be empty</string>
+    <string name="toast_password_wrong_format">Error, please try again. </string>
+    <string name="toast_last_language_filter">Choose at least one language!</string>
+    <string name="hind_password">The password should be composed of 6-16 digits and letters (case sensitive).</string>
+    <string name="apps_content">Founded in 1997</string>
+
+    <!--apps end-->
+
+    <string name="install_youtube">Please download the YouTube client to play video</string>
+    <string name="install_netflix">Please download the Netflix client to play video</string>
+    <string name="recently_view">Recently</string>
+    <string name="click_meun">Click the MENU key to edit</string>
+    <string name="click_back">Click the BACK key to exit my apps</string>
+    <string name="click_menu_app">Click the MENU key to edit my apps</string>
+    <string name="delete">Delete</string>
+    <string name="network_bad">No network connection, please check the network.</string>
+
+    <!--file management-->
+    <string name="file_local">Local</string>
+
+    <string name="category_all">all</string>
+    <string name="category_apk">apk</string>
+    <string name="category_media">Media</string>
+    <string name="category_pic">Image</string>
+
+    <string name="category_title_local">local</string>
+    <string name="public_file_alert_1">Click the</string>
+    <string name="public_file_alert_2">key to select edit function</string>
+    <string name="click_back_notice">key to exit to edit mode</string>
+    <string name="usb_insert">USB external device has been inserted.</string>
+    <string name="usb_open">open</string>
+
+    <string name="file_open_failed">No application can open the file.</string>
+    <string name="file_manage_delete">Delete</string>
+    <string name="file_manage_delete_alert">Are you sure you want to delete it?</string>
+    <string name="file_delete_success">Delete success！</string>
+    <string name="file_delete_fail">Failed to delete!</string>
+    <string name="delete_yes">Yes</string>
+    <string name="delete_no">No</string>
+    <string name="usb_remove">USB external device has been pop-up.</string>
+
+    <!--user agreetment-->
+    <string name="whale_tv_terms">Terms &amp; Conditions</string>
+    <string name="accept">Agree</string>
+    <string name="do_not_accept">Disagree</string>
+    <!--VoicesearchAtivity-->
+
+    <string name="no_result_by_key">No result!</string>
+    <string name="permission_denied">Permission denied cannot download file</string>
+
+    <string name="satellite">Satellite</string>
+    <string name="cable">Cable</string>
+    <string name="antenna">Antenna</string>
+    <string name="atv">ATV</string>
+    <string name="av">AV</string>
+    <string name="scart">SCART</string>
+    <string name="component">COMPONENT</string>
+    <string name="hdmi1">HDMI1</string>
+    <string name="hdmi2">HDMI2</string>
+    <string name="hdmi3">HDMI3</string>
+    <string name="hdmi4">HDMI4</string>
+    <string name="vga">VGA</string>
+    <string name="r">R</string>
+
+    <string name="score_source">Score Source:</string>
+    <string name="no_find_data">Data is none</string>
+    <string name="app_removed">The app has been removed from the App store.</string>
+    <string name="input_source">Input Source</string>
+
+    <!-- new Change start -->
+    <string name="tabs_search"> Search </string>
+    <string name="tabs_home"> Home </string>
+    <string name="tabs_apps"> Apps </string>
+    <string name="tabs_video"> Video </string>
+    <string name="tabs_music"> Music </string>
+    <string name="tabs_setting"> Setting </string>
+    <string name="tabs_source"> Source </string>
+    <string name="tabs_weather"> Weather </string>
+    <string name="tabs_my"> My </string>
+    <string name="tabs_date"> Date </string>
+
+    <!-- new Change end -->
+
+    <string name="weather_real_feel">Sendible temperature</string>
+    <string name="weather_humidity">Humidity</string>
+    <string name="weather_visibility">Visibility</string>
+    <string name="weather_uv">UV</string>
+    <string name="weather_wind_direction">Wind direction</string>
+    <string name="weather_wind_speed">Wind speed</string>
+    <string name="weather_title">Weather</string>
+
+    <string name="clear">Clear</string>
+    <string name="no_history">No History Here</string>
+    <string name="install_success">Successful installation</string>
+
+    <!--设备抢登提示-->
+    <string name="other_login">This account has on other devices login!</string>
+    <string name="retry">Retry</string>
+    <string name="timeout">Netwrok connect timeout</string>
+    <string name="viewcounts">Views</string>
+
+    <!--Setting Begin-->
+    <!--操作列表-->
+    <string name="setting_op_network"> INTERNET </string>
+    <string name="setting_op_screen_saver"> SCREEN SAVER </string>
+    <string name="setting_op_update">APPS UPDATE</string>
+    <string name="setting_op_file_management">FILE MANAGEMENT</string>
+    <string name="setting_op_system"> SYSTEM </string>
+    <string name="setting_op_voice"> VOICE </string>
+    <string name="setting_op_language_filter"> LANGUAGE-FILTER FOR APPS </string>
+    <string name="setting_op_parent_control"> PARENTAL CONTROL </string>
+    <string name="setting_op_help"> HELP </string>
+    <string name="setting_op_about_tv"> ABOUT TV </string>
+    <string name="setting_update_last">All apps are the latest version</string>
+    <!--一级菜单-->
+    <!--网络-->
+    <string name="setting_wired_network">Wired internet</string>
+    <string name="setting_wireless_network">Wireless network</string>
+    <string name="setting_skip">Skip settings</string>
+    <!--屏保-->
+    <string name="setting_screen_switch">Screen saver</string>
+    <string name="setting_screen_time">Time</string>
+    <string name="setting_screen_type">Type</string>
+    <string name="setting_screen_preview">Preview</string>
+    <!--文件管理-->
+    <string name="setting_file_management_local">Local</string>
+    <!--语言与时间-->
+    <string name="setting_system_language">Language</string>
+    <string name="setting_system_Time">Time</string>
+    <!--语言过滤-->
+    <string name="setting_language_filter">Language Filter</string>
+    <!--帮助-->
+    <string name="setting_help_general_operation">General operation</string>
+    <string name="setting_help_about_network">About network connection</string>
+    <string name="setting_help_screen">How to set screen savers?</string>
+    <string name="setting_help_weather">About the weather forecast</string>
+    <string name="setting_help_parental">How to use parental control?</string>
+    <string name="setting_help_signal">How to set the signal source?</string>
+    <string name="setting_help_screen_sleep">How to set the screen sleep?</string>
+    <string name="setting_help_screen_shot">How to take a screen shot?</string>
+    <!--关于-->
+    <string name="setting_about_product_info">Product information</string>
+    <string name="setting_about_fw_version">Firmware version</string>
+    <string name="setting_about_terms_conditions">Terms &amp; conditions</string>
+    <string name="setting_about_restore">Restore to Default</string>
+    <string name="setting_about_restore_action">Restore</string>
+    <!--二级菜单-->
+    <!--屏保休眠时间-->
+    <string name="setting_screen_saver_disable">Disable</string>
+    <string name="setting_screen_saver_15sec">15sec</string>
+    <string name="setting_screen_saver_30sec">30sec</string>
+    <string name="setting_screen_saver_1min">1min</string>
+    <string name="setting_screen_saver_5min">5min</string>
+    <string name="setting_screen_saver_10min">10min</string>
+    <string name="setting_screen_saver_15min">15min</string>
+    <string name="setting_screen_saver_20min">20min</string>
+    <string name="setting_screen_saver_25min">25min</string>
+    <string name="setting_screen_saver_30min">30min</string>
+    <!--时间-->
+    <string name="setting_time_auto_sync">Auto Sync</string>
+    <string name="setting_time">Date &amp; Time</string>
+    <string name="setting_time_time_zone">Time Zone</string>
+    <!--语言过滤-->
+    <string name="Language_filter_Czech">Czech</string>
+    <string name="Language_filter_Danish">Danish</string>
+    <string name="Language_filter_Dutch">Dutch</string>
+    <string name="Language_filter_English">English</string>
+    <string name="Language_filter_Finnish">Finnish</string>
+    <string name="Language_filter_French">French</string>
+    <string name="Language_filter_German">German</string>
+    <string name="Language_filter_Italian">Italian</string>
+    <string name="Language_filter_Polish">Polish</string>
+    <string name="Language_filter_Russian">Russian</string>
+    <string name="Language_filter_Spanish">Spanish</string>
+    <string name="Language_filter_Swedish">Swedish</string>
+    <string name="Language_filter_Turkish">Turkish</string>
+    <string name="Language_filter_Simplified_Chinese">Simplified Chinese</string>
+    <string name="Language_filter_Traditional_Chinese">Traditional Chinese</string>
+    <!--三级菜单-->
+    <!--月份-->
+    <string name="time_month_jan">Jan</string>
+    <string name="time_month_feb">Feb</string>
+    <string name="time_month_mar">Mar</string>
+    <string name="time_month_apr">Apr</string>
+    <string name="time_month_may">May</string>
+    <string name="time_month_jun">Jun</string>
+    <string name="time_month_jul">Jul</string>
+    <string name="time_month_aug">Aug</string>
+    <string name="time_month_sep">Sep</string>
+    <string name="time_month_oct">Oct</string>
+    <string name="time_month_nov">Nov</string>
+    <string name="time_month_dec">Dec</string>
+    <!--时区-->
+    <string name="setting_gmt_Kaliningrad">Kaliningrad GMT+2</string>
+    <string name="setting_gmt_Moscow">Moscow GMT+3</string>
+    <string name="setting_gmt_Samarra">Samarra GMT+4</string>
+    <string name="setting_gmt_Yekaterinburg">Yekaterinburg GMT+5</string>
+    <string name="setting_gmt_Omsk">Omsk GMT+6</string>
+    <string name="setting_gmt_Krasnoyarsk">Krasnoyarsk GMT+7</string>
+    <string name="setting_gmt_Irkutsk">Irkutsk GMT+8</string>
+    <string name="setting_gmt_Yakutsk">Yakutsk GMT+9</string>
+    <string name="setting_gmt_Vladivosktok">Vladivosktok GMT+10</string>
+    <string name="setting_gmt_Srednekolymsk">Srednekolymsk GMT+11</string>
+    <string name="setting_gmt_Kamchatka">Kamchatka GMT+12</string>
+    <!--产品信息-->
+    <string name="setting_about_product_info_name">Name</string>
+    <string name="setting_about_product_info_soft_version">Software Version</string>
+    <!--设置其他相关-->
+    <string name="setting_help_question"> How to conduct real-name authentication? </string>
+    <string name="setting_channel_dvb"> DVB Antenna _Air_Default</string>
+    <string name="setting_channel_auto"> Auto Scan </string>
+    <string name="setting_channel_manual"> Manual </string>
+    <string name="setting_channel_hbbtv"> HbbTv _Disable_Enable</string>
+    <string name="setting_channel_signal"> Signal Information </string>
+    <string name="setting_sound_sound_mode"> Sound Mode _Low_Standard_High</string>
+    <string name="setting_sound_surround_sound"> Surround Sound _Disable_Enable</string>
+    <string name="setting_sound_speaker"> Speaker </string>
+    <string name="setting_sound_avl"> AVL _Disable_Enable</string>
+    <string name="setting_picture_picture_mode"> Picture Mode _Low_Standard_High</string>
+    <string name="setting_picture_aspect_ratio"> Aspect Ratio _Auto_Manually</string>
+    <string name="setting_seletect_language">Please select a language</string>
+    <string name="setting_seletect_country">Please select a country</string>
+    <string name="setting_seletect_network">Please select a network</string>
+    <string name="daylight_savings">Daylight Savings</string>
+    <string name="network_connection_success">Network connection success!</string>
+    <string name="go_to_whale_tv">Go to whale tv</string>
+    <string name="goto_network_setting">Go to network settings</string>
+    <!--Setting End-->
+    <string name="deleting">Deleting, please wait</string>
+    <string name="file_clear_success">Clear success！</string>
+    <string name="no_playable_files">No playable files</string>
+    <string name="no_recommend_data">No recommended data</string>
+
+    <!--upgrade dialog-->
+    <string name="upgrade_title">EXISTING V2.2.1 VERSIONS CAN BE UPDATED</string>
+    <string name="upgrade_title_second">What\'s new:</string>
+    <string name="upgrade_update">Update</string>
+    <string name="upgrade_cancel">Cancel</string>
+    <string name="upgrading">UPDATING</string>
+    <string name="upgrading_alert">Please keep the power supply connected TV may be restarted during installation</string>
+    <string name="upgrading_version">Software version </string>
+
+    <!--screen protect color-->
+    <string name="screen_style_name">Colors</string>
+
+    <string name="quit">Quit</string>
+    <string name="quilt_alert">Downloading an updated version, are you sure you want to quit downloading?</string>
+    <string name="click_history_back">Press BACK to exit edit mode</string>
+
+    <string name="setting_news">SETTINGS</string>
+    <string name="app_update">APP UPDATE</string>
+    <string name="voice">VOICE</string>
+
+
+    <!--特殊翻译需要注意的部分  %s 和%1$S和%1$s和 %2$s 和%1$d这个不能翻译也不能有空格(即含%的那个组合不用翻译,其他单词还是要翻译的)                              start-->
+    <string name="install_app">Please download the %s client first. then click to play the video</string>
+    <string name="connecting_to">Connecting to \" %1$S \"</string>
+    <string name="file_storage_used">%1$s used of %2$s</string>
+    <string name="search_results_found">%1$s results</string>
+    <string name="search_by_key">%1$s results</string>
+    <string name="category_item_amount">%1$d files</string>
+    <!--这个不用翻译-->
+    <string name="usb_name">( %1$s )</string>
+
+    <!--特殊翻译需要注意的部分 end-->
+
+    <!--account tip-->
+    <string name="registration_success">registration success</string>
+    <string name="reset_successfully">Reset successfully</string>
+    <string name="parse_pkg_err">The installation package is damaged, please download again</string>
+
+    <!--补充部分-->
+    <string name="data_acquisition_failed">Data acquisition failed</string>
+
+</resources>
