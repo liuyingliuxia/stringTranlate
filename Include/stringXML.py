@@ -16,6 +16,7 @@ import xml.dom.minidom
 
 # 使用minidom解析器打开 XML 文档
 fromFileName = xml.dom.minidom.parse("strings.xml")
+
 # 最后保存的文档
 toFileName = 'strings_cht.xml'
 
@@ -106,7 +107,5 @@ def saveXML(nameList, keyList):
 
 
 if __name__ == '__main__':
-    # for i in tqdm(range(20)):
-    #     sleep(0.5)
     autoTranslate()
 
