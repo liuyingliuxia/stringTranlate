@@ -1,8 +1,7 @@
 #!/usr/bin/python
 
 # -*- coding: UTF-8 -*-
-
-
+import time
 from xml.dom.minidom import parse
 import http.client
 import hashlib
@@ -84,12 +83,11 @@ def baiduTranslate(q):
     try:
         httpClient = http.client.HTTPConnection('api.fanyi.baidu.com')
         httpClient.request('GET', myurls)
-
         # response是HTTPResponse对象
         response = httpClient.getresponse()
         result_all = response.read().decode("utf-8")
         result = json.loads(result_all)
-
+        time.sleep(1)  # 免费的api接口，只能1秒请求一次
         # print(result)
         return jsonToString(result)
 
