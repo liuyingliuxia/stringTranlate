@@ -1,6 +1,6 @@
 # 调用baidu翻译的接口，实现转换android stuido 中的values/strings.xml 解放生产力，自动翻译生成文件
 ## 因为使用的是合法免费的接口，每秒只能请求一次，测试结果翻译330个字段需要8分钟左右
-### 更多文档请参考[ 百度翻译api文档 ] (https://api.fanyi.baidu.com/doc/21)
+### 更多文档请参考[百度翻译api文档](https://api.fanyi.baidu.com/doc/21)
 ### 常见语种列表
 
 名称      |代码	|名称	|代码	|名称	|代码
@@ -21,3 +21,4 @@
 100%|██████████| 330/330 [08:02<00:00,  1.46s/it]
 保存文件strings_cht.xml成功！
 
+### [核心代码](https://github.com/liuyingliuxia/stringTranlate/blob/master/Include/stringXML.py)
