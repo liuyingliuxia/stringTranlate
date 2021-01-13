@@ -3,11 +3,26 @@
 <!--    <string name="wifi_connected">Wifi is connected!</string>-->
     <string name="play">Play</string>
     <string name="open">Open</string>
-<!--    <string name="net_bad">The network is not good, please try again</string>-->
-<!--    <string name="no_available_wifi">No available network</string>-->
-<!--    <string name="silent_install_failed">Silent installation failed, please install it manually</string>-->
-<!--    <string name="network_disconnect">Network disconnected</string>-->
-<!--    <string name="network_connect">Network connected</string>-->
-<!--    <string name="trial">Trial</string>-->
+  <!-- new Change start -->
+    <string name="tabs_search"> Search </string>
+    <string name="tabs_home"> Home </string>
+    <string name="tabs_apps"> Apps </string>
+    <string name="tabs_video"> Video </string>
+    <string name="tabs_music"> Music </string>
+    <string name="tabs_setting"> Setting </string>
+    <string name="tabs_source"> Source </string>
+    <string name="tabs_weather"> Weather </string>
+    <string name="tabs_my"> My </string>
+    <string name="tabs_date"> Date </string>
+
+    <!-- new Change end -->
+
+    <string name="weather_real_feel">Sendible temperature</string>
+    <string name="weather_humidity">Humidity</string>
+    <string name="weather_visibility">Visibility</string>
+    <string name="weather_uv">UV</string>
+    <string name="weather_wind_direction">Wind direction</string>
+    <string name="weather_wind_speed">Wind speed</string>
+    <string name="weather_title">Weather</string>
     <string name="stop">Stop</string>
 </resources>

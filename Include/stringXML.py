@@ -14,23 +14,26 @@ import random
 import json
 import xml.dom.minidom
 
-# 使用minidom解析器打开 XML 文档
-fromFileName = xml.dom.minidom.parse("strings.xml")
-
-# 最后保存的文档
-toFileName = 'strings_cht.xml'
-
-collection = fromFileName.documentElement
-
 appid = '20210110000668359'  # 填写你的appid
 secretKey = 'rX_4tltNBEZMl5PsxW79'  # 填写你的密钥
 
 httpClient = None
 myurl = '/api/trans/vip/translate'
+languageList = ['auto', 'cht', 'zh', 'jp', 'kor', 'fra', 'spa', 'th', 'ara', 'ru', 'pt', 'de', 'it',
+                'el', 'nl', 'pl', 'bul',
+                'dan', 'fin', 'cs', 'rom', 'slo', 'swe', 'hu', 'cht', 'vie']
+# 具体语言对照详见README.md
 
 fromLang = 'en'  # 原文语种
-toLang = 'cht'  # 译文语种
+toLang = languageList[5]  # 译文语种
 salt = random.randint(32768, 65536)
+speed = 0.8  # 默认值为1 请求接口的频率 最快0.8了，再快就要充钱了
+# 使用minidom解析器打开 XML 文档
+fromFileName = xml.dom.minidom.parse("test0.xml")
+collection = fromFileName.documentElement
+
+# 最后保存的文档
+toFileName = 'strings_' + toLang + '.xml'
 
 
 def autoTranslate():
@@ -62,7 +65,7 @@ def baiduTranslate(q):
         response = httpClient.getresponse()
         result_all = response.read().decode("utf-8")
         result = json.loads(result_all)
-        time.sleep(1)  # 免费的api接口，只能1秒请求一次
+        time.sleep(speed)  # 免费的api接口，只能1秒请求一次
         # print(result)
         return jsonToString(result)
 
@@ -87,7 +90,6 @@ def jsonToString(data):
 
 
 def saveXML(nameList, keyList):
-
     doc = Document()  # 创建DOM文档对象
     resources = doc.createElement('resources')  # 创建根元素
     doc.appendChild(resources)
@@ -99,7 +101,7 @@ def saveXML(nameList, keyList):
             stringItem.appendChild(content)  # 把两个>...< 中的key 加入
             resources.appendChild(stringItem)  # 最后把string加到resources中
 
-    f = open(toFileName, 'w',encoding='utf-8')
+    f = open(toFileName, 'w', encoding='utf-8')
     # f.write(doc.toprettyxml(indent = ' ', newl = '\n', encoding = 'utf-8'))
     doc.writexml(f, indent=' ', newl='\n', addindent='\t', encoding='utf-8')
     f.close()
@@ -108,4 +110,3 @@ def saveXML(nameList, keyList):
 
 if __name__ == '__main__':
     autoTranslate()
-
