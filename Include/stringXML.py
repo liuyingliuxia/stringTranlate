@@ -14,8 +14,8 @@ import random
 import json
 import xml.dom.minidom
 
-appid = '20210110000668359'  # 填写你的appid
-secretKey = 'rX_4tltNBEZMl5PsxW79'  # 填写你的密钥
+appid = '000000000000000'  # 填写你的appid
+secretKey = 'abcdefg'  # 填写你的密钥
 
 httpClient = None
 myurl = '/api/trans/vip/translate'
@@ -37,7 +37,7 @@ languageList = ['bul', 'slo']
 fromLang = 'en'  # 原文语种
 # toLang = languageList[5]  # 译文语种
 salt = random.randint(32768, 65536)
-speed = 0.1  # 默认值为1 请求接口的频率 最快0.8了，再快就要充钱了
+speed = 0.1  # 高级版本 每秒10个字符翻译
 # 使用minidom解析器打开 XML 文档
 fromFileName = xml.dom.minidom.parse("strings.xml")
 collection = fromFileName.documentElement
@@ -127,4 +127,3 @@ def saveXML(nameList, keyList, toLanguage):
 if __name__ == '__main__':
     for toLan in languageList:
         autoTranslate(toLan)
-    # autoTranslate('jp')
