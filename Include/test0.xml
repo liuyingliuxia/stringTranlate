@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--    <string name="wifi_connected">Wifi is connected!</string>-->
-    <string name="play">Play</string>
-    <string name="open">Open</string>
-  <!-- new Change start -->
     <string name="tabs_search"> Search </string>
     <string name="tabs_home"> Home </string>
     <string name="tabs_apps"> Apps </string>
@@ -14,15 +10,4 @@
     <string name="tabs_weather"> Weather </string>
     <string name="tabs_my"> My </string>
     <string name="tabs_date"> Date </string>
-
-    <!-- new Change end -->
-
-    <string name="weather_real_feel">Sendible temperature</string>
-    <string name="weather_humidity">Humidity</string>
-    <string name="weather_visibility">Visibility</string>
-    <string name="weather_uv">UV</string>
-    <string name="weather_wind_direction">Wind direction</string>
-    <string name="weather_wind_speed">Wind speed</string>
-    <string name="weather_title">Weather</string>
-    <string name="stop">Stop</string>
 </resources>

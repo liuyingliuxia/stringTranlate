@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">WHALE_TV_OPEN_LAUNCHER</string>
+<!--    <string name="app_name">WHALE_TV_OPEN_LAUNCHER</string>-->
     <string name="recently">Recently Viewed</string>
+
+<!--    &lt;!&ndash;login key start&ndash;&gt;-->
+<!--    <string name="facebook_app_id">159888557966956</string>-->
+<!--    <string name="fb_login_protocol_scheme">fb159888557966956</string>-->
+
+<!--    <string name="fb_scope">public_profile,user_likes</string>-->
+<!--    <string name="fb_access_token">159888557966956|391d4707c40dc1f7fa84ffb37eb23165</string>-->
+
+<!--    <string name="twitter_api_key">PxbMDQn3H08EiGfj2gtfsfTuG</string>-->
+<!--    <string name="twitter_secrate_key">GRoIYrPD9wQyCGCAeoxbzkc7HDwQg6QboLEHATX2dfyEFdbMIt</string>-->
+<!--    &lt;!&ndash;login key end&ndash;&gt;-->
+<!--    &lt;!&ndash;Bugly app id start&ndash;&gt;-->
+<!--    <string name="bugly_app_id">21029ed87c</string>-->
+<!--    &lt;!&ndash;Bugly app id end&ndash;&gt;-->
+
     <string name="personal_login_tittle">Log-in by e-mail</string>
     <string name="personal_account_title">Email address</string>
     <string name="personal_account_hint">Please input the correct email address.</string>
@@ -387,7 +402,7 @@
     <string name="search_by_key">%1$s results</string>
     <string name="category_item_amount">%1$d files</string>
     <!--这个不用翻译-->
-    <string name="usb_name">( %1$s )</string>
+<!--    <string name="usb_name">( %1$s )</string>-->
 
     <!--特殊翻译需要注意的部分 end-->
 
@@ -398,5 +413,5 @@
 
     <!--补充部分-->
     <string name="data_acquisition_failed">Data acquisition failed</string>
-
+    <string name="update_latest_version">All apps are the latest version</string>
 </resources>
