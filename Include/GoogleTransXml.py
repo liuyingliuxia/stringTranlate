@@ -16,11 +16,6 @@ import xml.dom.minidom
 
 from Include.GoogleTran import Yuguii
 
-appid = '20210110000668359'  # 填写你的appid
-secretKey = 'rX_4tltNBEZMl5PsxW79'  # 填写你的密钥
-
-httpClient = None
-myurl = '/api/trans/vip/translate'
 
 # 把需要翻译的语言全部写在languageList里，批量翻译
 # languageList = ['auto', 'cht', 'zh', 'jp', 'kor', 'fra', 'spa', 'th', 'ara', 'ru', 'pt', 'de', 'it',
@@ -31,12 +26,12 @@ myurl = '/api/trans/vip/translate'
 # 希伯来语heb,塞尔维亚-克罗地亚语sec,黑山语mot,马其顿语mac,波斯尼亚语	bos,阿尔巴尼亚语alb,
 # 蒙古语（西里尔）	moc ,	克罗地亚语	hrv,斯洛文尼亚语	slo,保加利亚语bul,格鲁吉亚语	geo
 
-languageList = ['ben']
+languageList = ['bn']
 # 保加利亚语bul，斯洛文尼亚语	slo
 
 # 具体语言对照详见README.md
 
-fromLang = 'en'  # 原文语种
+fromLang = 'en'  # 默认原文语种
 # toLang = languageList[5]  # 译文语种
 salt = random.randint(32768, 65536)
 speed = 0.1  # 高级版本 每秒10个字符翻译
@@ -47,6 +42,32 @@ collection = fromFileName.documentElement
 
 # 最后保存的文档
 # toFileName = 'strings_' + toLanguage + '.xml'
+
+def open_url(url):
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20100101 Firefox/23.0'}
+    req = urllib.request.Request(url=url, headers=headers)
+    response = urllib.request.urlopen(req)
+    data = response.read().decode('utf-8')
+    return data
+
+
+def translate(content, tk, toLang):
+    if len(content) > 4891:
+        print("翻译文本超过限制！")
+        return
+
+    content = urllib.parse.quote(content)
+
+    url = "http://translate.google.cn/translate_a/single?client=t" \
+          "&sl=en&tl=%s&hl=%s&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca" \
+          "&dt=rw&dt=rm&dt=ss&dt=t&ie=UTF-8&oe=UTF-8&clearbtn=1&otf=1&pc=1" \
+          "&srcrom=0&ssel=0&tsel=0&kc=2&tk=%s&q=%s" % (toLan, toLan, tk, content)
+
+    result = open_url(url)
+
+    end = result.find("\",")
+    if end > 4:
+        return result[4:end]
 
 
 def autoTranslate(toLanguage):
@@ -61,45 +82,14 @@ def autoTranslate(toLanguage):
         # print("translate== %s" % baiduTranslate(keys, toLanguage))
         # print("=========================================")
         nameList.append(myString.getAttribute('name'))
-        keyList.append(baiduTranslate(keys, toLanguage))
+        keyList.append(GoogleTranslate(keys, toLanguage))
     saveXML(nameList, keyList, toLanguage)
 
 
-def baiduTranslate(q, toLanguage):
-    sign = appid + q + str(salt) + secretKey
-    sign = hashlib.md5(sign.encode()).hexdigest()
-    myurls = myurl + '?appid=' + appid + '&q=' + urllib.parse.quote(
-        q) + '&from=' + fromLang + '&to=' + toLanguage + '&salt=' + str(
-        salt) + '&sign=' + sign
-    try:
-        httpClient = http.client.HTTPConnection('api.fanyi.baidu.com')
-        httpClient.request('GET', myurls)
-        # response是HTTPResponse对象
-        response = httpClient.getresponse()
-        result_all = response.read().decode("utf-8")
-        result = json.loads(result_all)
-        time.sleep(speed)  # 免费的api接口，只能1秒请求一次
-        # print(result)
-        return jsonToString(result)
-
-    except Exception as e:
-        print(e)
-    finally:
-        if httpClient:
-            httpClient.close()
-
-
-def jsonToString(data):
-    # Python 字典类型转换为 JSON 对象
-    json_str = json.dumps(data)
-    # print("JSON 请求结果：", json_str)
-
-    # 将 JSON 对象转换为 Python 字典
-    data2 = json.loads(json_str, encoding='utf-8')
-    # print("%s to %s " % (data2['from'], data2["to"]))
-    # print("data['trans_result']: ", data2['trans_result'])
-    result = data2['trans_result']
-    return result[0]['dst']
+def GoogleTranslate(q, toLanguage):
+    js = Yuguii()
+    tk = js.getTk(q)
+    return translate(q, tk, toLanguage)
 
 
 def saveXML(nameList, keyList, toLanguage):
@@ -123,7 +113,6 @@ def saveXML(nameList, keyList, toLanguage):
         print('保存文件%s成功！' % toFileName)
     except TypeError as err:
         print('所有值都为空！翻译失败', err)
-
 
 
 if __name__ == '__main__':
